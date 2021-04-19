@@ -1,4 +1,5 @@
 # powercat
 powercat examples
 
-IEX (New-Object System.Net.Webclient).DownloadString('https://github.com/muslumhack/powercat/powercat.ps1')
+Download:
+IEX (New-Object System.Net.Webclient).DownloadString('https://raw.githubusercontent.com/besimorhino/powercat/master/powercat.ps1')
